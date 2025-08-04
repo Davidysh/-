@@ -377,3 +377,26 @@ ORDER BY o1.order_date DESC;
 `RIGHT JOIN table2 ON table1.column_name = table2.column_name;`  
 同左连接
 
+## 处理NULL 
+1.IS NULL/IS NOT NULL  
+2.COALESCE('DATE', 'name',1) 接受多个参数，返回参数列表中的第一个非 NULL 值    
+类似的IFNULL('DATE', 0) 接受两个参数，如果第一个参数为 NULL，则返回第二个参数  
+3.NULL排序   
+4.注意聚合函数对NULL的处理  
+在使用聚合函数（如 COUNT, SUM, AVG）时，它们会忽略 NULL 值，因此可能会得到不同于预期的结果。
+
+## 正则表达式
+`SELECT column1, column2, ...`  
+`FROM table_name`  
+`WHERE column_name REGEXP（/RLIKE） 'pattern';`  ##pattern是一个正则表达式
+
+## ALTER 命令
+ALTER 命令允许你添加、修改或删除数据库对象，并且可以用于更改表的列定义、添加约束、创建和删除索引等操作。
+
+## 创建索引(尚不能理解)
+索引能够显著提高查询的速度，尤其是在大型表中进行搜索时。通过使用索引，MySQL 可以直接定位到满足查询条件的数据行，而无需逐行扫描整个表。
+
+但是索引需要占用额外的存储空间。
+对表进行插入、更新和删除操作时，索引需要维护，可能会影响性能。
+过多或不合理的索引可能会导致性能下降，因此需要谨慎选择和规划索引。  
+索引并非越多越好。
