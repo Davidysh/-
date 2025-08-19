@@ -380,3 +380,7 @@ InterfaceFunction().get_function_desc()
 5. 返回包含中文参数名的数据  
    ↓  
 6. 在HTML生成时使用中文名称作为表格标题  
+
+## 供应商交期延误信息
+目前已经开发出来了
+但是速度太慢初步判断是CGOrderLarge::get_cg_contract_overdue_days 方法的反复调用导致的时间太慢
