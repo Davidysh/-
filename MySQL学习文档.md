@@ -400,3 +400,10 @@ ALTER 命令允许你添加、修改或删除数据库对象，并且可以用�
 对表进行插入、更新和删除操作时，索引需要维护，可能会影响性能。  
 过多或不合理的索引可能会导致性能下降，因此需要谨慎选择和规划索引。  
 索引并非越多越好。  
+
+## 开发的时候接触的sql
+select developer
+from hq_db.t_online_product_center_detail a
+inner join hq_db.t_online_product_center_person_infor b
+on a.sku = b.sku
+where a.sku = '';

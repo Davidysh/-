@@ -297,7 +297,16 @@ finally:
 return result        
 ```
 
-## 全局函数开发流程学习
+### 问题
+1.class定义后下的方法中obj指代什么搜索所出来的数据库信息？那么谁又回去搜索
+在注册表中将模型与obj对应
+2.看起来没有调用，定义这些class谁来执行呢？
+自定义管理界面类   Django Admin 框架自动调用：Django Admin 通过反射机制，根据 list_display 中的方法名自动调用 ：只要方法名在 list_display 中，Django 就会自动调用
+3.# 模型类名：驼峰命名，对应数据库表名什么意思
+4.get_list_queryset这个方法来获取url
+
+
+# 全局函数开发流程学习
 其接口定义在setting中funchub_service_url   
 其属性 定义在# func_process_app/table/t_public_function_model.py 可以在hq_db中t_public_function_source_config表中找到全局函数的相关信息 
 其url属性定义了其所在文件的位置 可以通过`SELECT url, function_name FROM t_public_function WHERE id = XXX;`来查找
