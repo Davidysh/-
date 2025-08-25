@@ -296,6 +296,8 @@ finally:
     db_helper.close_session()
 return result        
 ```
+### 优化原型界面
+1.可以在数据接口区域找到对应的定义，以及方法类名 
 
 ### 问题
 1.class定义后下的方法中obj指代什么搜索所出来的数据库信息？那么谁又回去搜索
@@ -304,7 +306,11 @@ return result
 自定义管理界面类   Django Admin 框架自动调用：Django Admin 通过反射机制，根据 list_display 中的方法名自动调用 ：只要方法名在 list_display 中，Django 就会自动调用
 3.# 模型类名：驼峰命名，对应数据库表名什么意思
 4.get_list_queryset这个方法来获取url
-
+5."{:,}" 的作用
+"{:,}" 是 Python 的格式化字符串语法，它的作用是：添加千位分隔符：每三位数字添加一个逗号提高数字可读性：让大数字更容易阅读
+6.t_fba_light_small_inventory_report 在正式库中，验收库没有
+7.配置渲染/代码渲染的区别  相关内容记录在全局低代码中
+配置渲染通过全局sql
 
 # 全局函数开发流程学习
 其接口定义在setting中funchub_service_url   
